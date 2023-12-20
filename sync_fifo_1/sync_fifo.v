@@ -37,7 +37,7 @@ always @(posedge clk or negedge rst_n) begin
         rd_ptr<=0;
     end else begin
         if (rd_en_i==1) begin
-            data_o-mem[rd_ptr];
+            data_o<=mem[rd_ptr];
             rd_ptr<=rd_ptr+1;
         end
     end
